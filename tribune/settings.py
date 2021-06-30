@@ -21,10 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '=p1i4dn6_jy-9kmlfm&o%cx6^=6dt9-lxc8ab4&a8m0s^nc=#q'
 from decouple import config,Csv
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '=p1i4dn6_jy-9kmlfm&o%cx6^=6dt9-lxc8ab4&a8m0s^nc=#q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -162,8 +161,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
